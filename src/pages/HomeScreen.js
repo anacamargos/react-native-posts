@@ -7,7 +7,10 @@ export default class HomeScreen extends Component {
     return (
       <View>
         <Text>HomeScreen</Text>
-        <Button>Go to SignInScreen</Button>
+        <Button
+          onPress={() => this.props.navigation.navigate("SignInScreen")}
+          title="Go to Sign In Screen"
+        />
       </View>
     );
   }

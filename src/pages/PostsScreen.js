@@ -6,7 +6,10 @@ export default class PostsScreen extends Component {
     return (
       <View>
         <Text>PostsScreen</Text>
-        <Button>Go to Home</Button>
+        <Button
+          title="Go to Home"
+          onPress={() => this.props.navigation.navigate("HomeScreen")}
+        />
       </View>
     );
   }
