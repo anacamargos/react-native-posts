@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
   homeView: {
     flex: 1,
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    backgroundColor: "#fafafa"
   },
   homeText: {
     fontSize: 15,

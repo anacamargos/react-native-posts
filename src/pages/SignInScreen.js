@@ -13,13 +13,14 @@ export default class SignInScreen extends Component {
           style={styles.firstButton}
           onPress={() => this.props.navigation.navigate("PostsScreen")}
         >
-          <Text>Go to PostsScreen</Text>
+          <Text style={styles.firstText}>Go to PostsScreen</Text>
         </TouchableOpacity>
-        <Button
-          style={styles.secondButton}
-          title="Sign out"
+        <TouchableOpacity
+          style={styles.firstButton}
           onPress={() => this.props.navigation.navigate("HomeScreen")}
-        />
+        >
+          <Text style={styles.firstText}>Sign out</Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -34,12 +35,18 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     backgroundColor: "#0589e1",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    marginTop: 10
   },
-  secondButton: {},
+  firstText: {
+    fontSize: 15,
+    fontWeight: "bold",
+    color: "#FFF"
+  },
   signinView: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    backgroundColor: "#fafafa"
   }
 });
