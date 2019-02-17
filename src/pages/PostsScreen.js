@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Button } from "react-native";
+import { View, Button, StyleSheet } from "react-native";
 
 export default class PostsScreen extends Component {
   static navigationOptions = {
@@ -8,7 +8,7 @@ export default class PostsScreen extends Component {
 
   render() {
     return (
-      <View>
+      <View style={styles.postView}>
         <Button
           title="Go to Home"
           onPress={() => this.props.navigation.navigate("HomeScreen")}
@@ -17,3 +17,11 @@ export default class PostsScreen extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  postView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
+  }
+});

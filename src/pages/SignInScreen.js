@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Button, StyleSheet } from "react-native";
+import { View, TouchableOpacity, StyleSheet, Text, Button } from "react-native";
 
 export default class SignInScreen extends Component {
   static navigationOptions = {
@@ -9,11 +9,12 @@ export default class SignInScreen extends Component {
   render() {
     return (
       <View style={styles.signinView}>
-        <Button
+        <TouchableOpacity
           style={styles.firstButton}
-          title="Go to PostsScreen"
           onPress={() => this.props.navigation.navigate("PostsScreen")}
-        />
+        >
+          <Text>Go to PostsScreen</Text>
+        </TouchableOpacity>
         <Button
           style={styles.secondButton}
           title="Sign out"
@@ -26,7 +27,14 @@ export default class SignInScreen extends Component {
 
 const styles = StyleSheet.create({
   firstButton: {
-    flex: 1
+    borderWidth: 2,
+    borderColor: "#0589e1",
+    height: 42,
+    width: 200,
+    borderRadius: 5,
+    backgroundColor: "#0589e1",
+    justifyContent: "center",
+    alignItems: "center"
   },
   secondButton: {},
   signinView: {

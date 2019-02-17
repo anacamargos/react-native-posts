@@ -27,11 +27,10 @@ const styles = StyleSheet.create({
     width: 200,
     borderRadius: 5,
     borderWidth: 2,
-    borderColor: "#da552f",
-    backgroundColor: "#da552f",
+    borderColor: "#0589e1",
+    backgroundColor: "#0589e1",
     justifyContent: "center",
-    alignItems: "center",
-    marginTop: 10
+    alignItems: "center"
   },
   homeView: {
     flex: 1,
