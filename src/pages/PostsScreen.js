@@ -1,11 +1,14 @@
 import React, { Component } from "react";
-import { View, Text, Button } from "react-native";
+import { View, Button } from "react-native";
 
 export default class PostsScreen extends Component {
+  static navigationOptions = {
+    title: "Posts"
+  };
+
   render() {
     return (
       <View>
-        <Text>PostsScreen</Text>
         <Button
           title="Go to Home"
           onPress={() => this.props.navigation.navigate("HomeScreen")}
